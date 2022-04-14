@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Nova Square';
+}
+
+:root {
+  --neon: #FF0088;
+}
+
+body {
+  overflow: hidden;
+  background: #000000;
+}
+
+button {
+  color: var(--neon);
+  border: 0.3rem solid var(--neon);
+  background: transparent;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 1rem inset,
+    0 0 2rem;
+  text-shadow: 0 0 1rem var(--neon);
+  font-size: 1.5rem;
+  font-weight: bolder;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.8rem 2.5rem;
+  transition-duration: 200ms;
+}
+
+button::before {
+  content: '';
+  background: var(--neon);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 120%;
+  left: -1%;
+  transform: perspective(3rem) rotateX(40deg) scale(1, .35);
+  filter: blur(40px);
+}
+
+span {
+  position: absolute;
+  color: var(--neon);
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 1rem var(--neon),
+    0 0 1rem var(--neon),
+    0 0 1rem var(--neon);
+}
